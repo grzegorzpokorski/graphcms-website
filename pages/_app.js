@@ -1,7 +1,17 @@
-import '../styles/globals.css'
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+config.autoAddCss = false;
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
+import "./../styles/style.scss";
 
-export default MyApp
+import Layaut from "../components/Layout";
+
+const MyApp = ({ Component, pageProps }) => {
+  return (
+    <Layaut>
+      <Component {...pageProps} />
+    </Layaut>
+  );
+};
+
+export default MyApp;
