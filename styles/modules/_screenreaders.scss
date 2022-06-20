@@ -1,0 +1,16 @@
+.skip-link {
+  display: block;
+  left: -9999em;
+  text-decoration: none;
+  text-transform: none;
+  top: -9999em;
+}
+
+.skip-link:focus {
+  clip: auto;
+  height: auto;
+  left: 0px;
+  top: 0px;
+  width: auto;
+  z-index: 100000;
+}
