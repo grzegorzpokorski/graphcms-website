@@ -1,6 +1,7 @@
 import { gql } from "@apollo/client";
 import client from "../lib/apollo-client";
 import Image from "next/image";
+import Link from "next/link";
 
 const Home = ({ data }) => {
   console.log(data);
@@ -17,7 +18,11 @@ const Home = ({ data }) => {
                 height={post.featured_image.height}
               />
             </picture>
-            <h3 className={`font-bold text-xl`}>{post.title}</h3>
+            <Link href={`${post.slug}`}>
+              <a>
+                <h3 className={`font-bold text-xl`}>{post.title}</h3>
+              </a>
+            </Link>
           </article>
         ))}
     </section>
